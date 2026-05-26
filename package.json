@@ -1,0 +1,40 @@
+{
+  "name": "testingvial4visualstudiocode",
+  "displayName": "TestingVial Viewer",
+  "description": "Visual Studio Code extension to view .vial files",
+  "version": "0.0.1",
+  "publisher": "testingvial",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCustomEditor:vialViewer.editor"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "customEditors": [
+      {
+        "viewType": "vialViewer.editor",
+        "displayName": "Vial File Viewer",
+        "selector": [
+          {
+            "filenamePattern": "*.vial"
+          }
+        ],
+        "priority": "default"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "node --check src/*.js",
+    "test": "echo \"No test infrastructure is configured\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TestingVial/TestingVial4VisualStudioCode.git"
+  },
+  "license": "ISC"
+}
